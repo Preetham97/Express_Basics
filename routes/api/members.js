@@ -6,6 +6,7 @@ const uuid = require('uuid');
 
 // gets All members
 router.get('/', (req,res)=>{
+    console.log('GET  is called by the form?');
     res.json(members);
 });
  
@@ -25,7 +26,7 @@ router.get('/:id', (req,res)=>{
 
 //POST
 router.post('/', (req, res)=>{
-    //console.log('POST  is called');
+    console.log('POST  is called by the form?');
     //res.send(req.body);
     
     const newMember = {
@@ -44,6 +45,7 @@ router.post('/', (req, res)=>{
 
 //UPDATE
 router.put('/:id', (req,res)=>{
+    console.log('PUT  is called by the form?');
     //res.send(req.params.id);
     const found = members.some(member => member.id === parseInt(req.params.id));
 
